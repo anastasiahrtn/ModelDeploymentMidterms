@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 
-model = joblib.load('oopPicklefile_2602100120.pkl')
+model = joblib.load('XGmodel_2602100120.pkl')
 
 def main():
     st.title('Churn Prediction using XGBoost')
