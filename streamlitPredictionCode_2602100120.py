@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 
-model = joblib.load('XGmodel_2602100120.pkl')
+model = joblib.load('oopPicklefile_2602100120.pkl')
 
 def main():
     st.title('Churn Prediction using XGBoost')
@@ -13,11 +13,11 @@ def main():
     Gender = st.selectbox('Gender - Female: 0, Male: 1', [0,1])
     Age = st.slider('Age', 0, 100)
     Tenure = st.slider('Tenure', 0, 10)
-    Balance = st.number_input('Balance', min_value=0, max_value=300000)
+    Balance = st.number_input('Balance')
     NumOfProducts = st.selectbox('NumOfProducts', [1,2,3,4])
     HasCrCard = st.checkbox('I have a Credit Card')
     IsActiveMember = st.checkbox('I am an Active Member')
-    EstimatedSalary = number_input = st.number_input('Estimated Sallary', min_value=0.0, max_value=250000.0)
+    EstimatedSalary = number_input = st.number_input('Estimated Sallary')
 
    
     if st.button('Predict the Churn'):
